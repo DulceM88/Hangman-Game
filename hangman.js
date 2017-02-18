@@ -13,10 +13,12 @@ var wordBank = [
 
 var numTries= 9;
 var lettersPicked=[];
+var lettersOfWord=[];
 var winCounter =0;
 var lossCounter= 0;
 var wordChosen;
 var blankSpaces;
+
 
 
 //start of game
@@ -46,7 +48,26 @@ document.getElementById('guesses-left').innerHTML = numTries;
 	
 
 }
+//function that stores letter chosen by user and stores it in variable
+		function letterTest () {
+		
+        var userLetter = String.fromCharCode(event.keyCode).toLowerCase();
+        console.log(userLetter);
+
+        for (var i = 0; i < lettersOfWord.length; i++);
+
+        if (userLetter === lettersOfWord[i]){
+        	console.log(userLetter + " is present in this word")
+        }
 
 
+       /* for( var i = 0; i< lettersOfWord.length; i++){
+        	
+        	if(userLetter.indexOf(lettersOfWord [i]))
+        	console.log(userLetter + "is present in this word");
+    		}*/
+        }
+
+      
 
 startGame();
